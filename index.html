@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Varad Nair | Software Engineer
+  </title>
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#education" class="nav__link">Education</a>
+          </li>
+          <li class="nav__item">
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li class="nav__item">
+            <a href="#majorprojects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+            <!-- Headline -->
+
+
+    <div class="row">
+      <h1 class="heading-primary">
+        <!-- Replace the following name with your name -->
+        <span>Varad Nair</span>
+      </h1>
+      <p class="headline">Software Engineer</p>
+
+      <style>
+        .headline {
+          font-size: 1.5rem;
+          font-weight: bold;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 2px solid black;
+          display: inline-block;
+        }
+      </style>
+      
+      <script>
+        const headlines = ["I'm a Software Engineer ", "I'm a Full Stack Developer ", "I'm a Data Analyst ", "I'm the ONE you need! ","I am a Musician "];
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const headlineElement = document.querySelector(".headline");
+      
+        function typeEffect() {
+          const currentText = headlines[index];
+          if (isDeleting) {
+            headlineElement.textContent = currentText.substring(0, charIndex--);
+          } else {
+            headlineElement.textContent = currentText.substring(0, charIndex++);
+          }
+      
+          let typingSpeed = isDeleting ? 50 : 50; // Speed up deleting
+          if (!isDeleting && charIndex === currentText.length) {
+            typingSpeed = 1000; // Pause after typing
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            index = (index + 1) % headlines.length; // Move to next headline
+          }
+      
+          setTimeout(typeEffect, typingSpeed);
+        }
+      
+        typeEffect(); // Start typing effect
+      </script>
+
+
+      <!-- About Content Starts here -->
+      <div class="about__content">
+        <div class="about__text">
+          <!-- Replace the below paragraph with info about yourself -->
+          A Master’s student in Computer Science at the University of Texas at Arlington (Expected Graduation: May 2025) ,with a 2y/o work experience and a strong passion for full-stack development, machine learning, and cloud technologies. My focus is on building scalable and secure applications leveraging modern frameworks and architectures.
+
+          <!-- Provide a link to your resume -->
+          </br>
+          <p>
+          <a href="#contact" class="btn btn--pink">Get in touch</a>
+          <a href="https://drive.google.com/file/d/1B3PuUgo_4a-mY19BmWLu7sAnretus1Z6/view" class="btn btn--pink">Resume</a>
+        </p>
+        </div>
+
+        <div class="about__photo-container">
+          <!-- Add a nice photo of yourself -->
+          <img class="about__photo" src="./images/varad_prflpic.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- ***** Education ***** -->
+
+    <section class="education" id="education">
+      <div class="row">
+        <h2>Education</h2>
+        <div class="about__boxes">
+              <h3>University of Texas at Arlington (TX, USA)</h3>
+              <p>
+                <strong>Master of Science, Computer Science</strong>
+                </br>
+                <em>2023 - 2025</em>
+                </br>
+                <strong> <em> CGPA: 3.70 </em></strong>
+              </p>
+              </br>
+              <h3>AKTU Lucknow (UP, India)</h3>
+              <p>
+                <strong>Bachelor of Technology, Computer Science Engineering</strong>
+                </br>
+                <em>2017 - 2021</em>
+                </br>
+                <strong> <em> CGPA: 8.08 </em></strong>
+              </p>
+            </div>
+      </div>
+    </section>
+
+    <!-- ***** Experience ***** -->
+
+    <section class="experience" id="experience">
+      <div class="row">
+        <h2>Experience</h2>
+        <div class="work__boxes">
+          <div class="work__box">
+            <div class="container">
+              <div class="image">
+                <img src="./images/mavenir_logo.jpeg">
+              </div>
+              <div class="text">
+                <h3>Mavenir Systems</h3>
+                <p>
+                  <strong>Software Engineer RAN Intern</strong>
+                  </br>
+                  <em>May 2024 - Aug 2024</em>
+                  </br>
+                  <a href="https://drive.google.com/file/d/1B3PuUgo_4a-mY19BmWLu7sAnretus1Z6/view" target="_blank" class="link__text">
+                    <strong> <em> More Details ... <span>&rarr;</span> </em></strong>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="container">
+              <div class="image">
+                <img src="./images/tcs_logo.png">
+              </div>
+              <div class="text">
+                <h3>Tata Consultancy Services</h3>
+                <p>
+                  <strong>Assistant Systems Engineer</strong>
+                  </br>
+                  <em>Aug 2021 - June 2023</em>
+                  </br>
+                  <a href="https://drive.google.com/file/d/1B3PuUgo_4a-mY19BmWLu7sAnretus1Z6/view" target="_blank" class="link__text">
+                    <strong> <em> More Details ... <span>&rarr;</span> </em></strong>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Major Projects ***** -->
+
+    <section class="majorprojects" id="majorprojects">
+      <div class="row">
+        <nav class="nav" role="navigation">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="#majorprojects" class="nav__link">Major Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#officialprojects" class="nav__link">Other Projects</a>
+            </li>
+            
+          </ul>
+        </nav>
+        </br>
+        <h2>Major Projects</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Secure Phone Book 
+              </h3>
+              <p>
+                This project implements a secure Phone Book REST API using Python, JSON and Docker. The API ensures input validation using regular expressions and incorporates security features such as authentication, authorization, and logging.
+
+                The project is submitted in two versions:
+              </p>
+              <ul class="work__list">
+                <li>FastAPI Implementation</li>
+                <li>Flask Implementation  </li>
+                
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/secure-phonebook-api" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/P1.jpg" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Twitter Sentiment Analysis with CNN and BERT using Deep Learning</h3>
+              <p>
+                Applied TensorFlow and PyTorch for natural language processing and sentiment analysis, achieving over 80% accuracy by fine-tuning & leveraging CNN and BERT architectures for real-time data analysis.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>NLP</li>
+                <li>CNN</li>
+                <li>BERT</li>
+                <li>Deep Learning</li>
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>Transformers</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/Twitter-Sentiment-Analysis-with-CNN-and-BERT-using-Deep-Learning" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/P2.png" class="work__image" alt="Project 2" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Cloud based College Notes and Assignment Sharing System</h3>
+              <p>
+                Built and implemented a web-based platform for note and assignment sharing, enhancing resource accessibility by 60% with a combination of Django (back-end), Python, PostgreSQL (relational database), HTML5, and CSS (front-end).
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS/SCSS</li>
+                <li>JavaScript</li>
+                <li>PostgreSQL</li>
+                <li>Python</li>
+                <li>Django</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/Notes-Assignment-Sharing-System-using-Django-and-PostgreSQL" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/team-young-college-students-working-600nw-2111421299.webp" class="work__image" alt="Project 3" width="874" height="489" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>TF IDF Based Toy Search Engine Implementation</h3>
+              <p>
+                Designed and implemented a search engine prototype capable of processing multiple documents with 90% precision using TF-IDF vectorization, leveraging NLP techniques (tokenization, stemming, and stop-word removal) to improve relevance by 20% and optimizing indexing for a 25% reduction in query response time.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>Jupyter</li>
+                <li>NLP</li>
+                <li>Vectorization</li>
+                <li>Tokenization</li>
+                <li>Stemming</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/TF-IDF-Based-Toy-Search-Engine-Implementation" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/tf idf.webp" class="work__image" alt="Project 4" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Book Barter Mobile App</h3>
+              <p>
+                Engineered a full stack app using Java & Firebase's Cloud Fire store for book enthusiasts using object-oriented patterns, UML practices and inorder to facilitate finding, exchanging, and exploring books effortlessly.
+              </p>
+              <ul class="work__list">
+                <li>Java</li>
+                <li>Firebase Cloud Firestore</li>
+                <li>Android Studio</li>
+                <li>Agile Methodology</li>
+                <li>Object Oriented Programming</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/Book-Barter-Android-App" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/book barter.png" class="work__image" alt="Project 5" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Other Projects ***** -->
+
+    <section class="officialprojects" id="officialprojects">
+      <div class="row">
+        <h2>Other Projects</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Servigo</h3>
+              <p>
+                Developed a full-stack service booking platform using Angular, Spring Boot, and MySQL, implementing secure authentication with Spring Security and JWT to ensure data protection and scalability & used Lombok to reduce boilerplate code by 60%.
+              </p>
+              <ul class="work__list">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Angular</li>
+                <li>Maven</li>
+                <li>JWT</li>
+                <li>MySQL</li>
+
+
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/Servigo" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/servigo.webp" class="work__image" alt="Project 5" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Multi Threaded RPC File and Computational Server</h3>
+              <p>
+                In this project, a multi-threaded file server and computational server with Remote Procedure Call (RPC) communication are created. The project's technological overview, implementation specifics, and operational justifications are all included in the documentation. Python programming language and libraries include xmlrpc and rpyc for synchronous and asynchronous RPC, as well as filecmp for comparison.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>Sync & Async Remote Procedure  Call</li>
+                <li>Multi-threading</li>
+              
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/Multi-Threaded-RPC-File-and-Computational-Server-Development" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/RPC.jpg" class="work__image" alt="Project 5" />
+            </div>
+          </div>
+
+          
+          <div class="work__box">
+            <div class="work__text">
+              <h3>2 Phase Commit</h3>
+              <p>
+                A distributed transaction concurrency control protocol that can improve fault-tolerance and reduce overhead.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>Socket Programming</li>
+                <li>Remote Procedure Call</li>
+                <li>Timeout Mechanism</li>
+              
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/2-Phase-Commit" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/2pc.png" class="work__image" alt="Project 5" />
+            </div>
+          </div>
+          
+          <div class="work__box">
+            <div class="work__text">
+              <h3>AccessVault: Role Based Security Management</h3>
+              <p>
+                Designed and implemented a relational database system for managing discretionary access control, focusing on EER schema design, SQL implementation, and transaction management to ensure secure data handling and integrity.
+              </p>
+              <ul class="work__list">
+                <li>Python</li>
+                <li>EER, BCNF</li>
+                <li>MySQL</li>
+                <li>Oracle</li>
+                <li>Transaction Management</li>
+
+              
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/varadnair30/AccessVault" target="_blank" class="link__text">
+                  Visit Github Link<span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/accessvault.webp" class="work__image" alt="Project 5" />
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Minor Projects ***** -->
+
+
+    <!-- ***** Skills ***** -->
+    <section class="skills" id="skills">
+      <div class="row">
+        <h2>Skills</h2>
+        <div class="square-container" id="grid">
+          <!-- Add logos of the education or companies you'have worked with. -->
+          <div class="square">
+            <div class="content">
+              <img src="./images/angular.svg" class="client__logo" alt="Company 1" />
+            </div>
+          </div>  
+          
+          <div class="square"> 
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=bootstrap" class="client__logo" alt="Bootstrap" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=c" class="client__logo" alt="C" />
+            </div>
+            </div>
+
+            <div class="square">
+              <div class="content">
+                <img src="https://skillicons.dev/icons?i=cs" class="client__logo" alt="C#" />
+              </div>
+              </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=postgresql" class="client__logo" alt="PostgreSQL" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=mysql" class="client__logo" alt="MySQL" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=kubernetes" class="client__logo" alt="Kubernetes" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=linux" class="client__logo" alt="Linux" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=git" class="client__logo" alt="Git" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=github" class="client__logo" alt="GitHub" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=vscode" class="client__logo" alt="VSCode" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=eclipse" class="client__logo" alt="Eclipse" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=firebase" class="client__logo" alt="Firebase" />
+            </div>
+            </div>
+
+            <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=idea" class="client__logo" alt="IntelliJ IDEA" />
+            </div>
+            </div>
+
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/java.png" class="client__logo" alt="Company 3" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/python.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="https://skillicons.dev/icons?i=azure" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/spring.png" class="client__logo" alt="Company 3" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/django.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/mysql.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/docker.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+         <div class="square">
+            <div class="content">
+              <img src="./images/javascript.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/react.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/typescript.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/mongodb.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/express.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/node.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/maven.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/junit.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+
+          <div class="square">
+            <div class="content">
+              <img src="./images/html.png" class="client__logo" alt="Company 1" />
+            </div>
+          </div>
+          <div class="square">
+            <div class="content">
+              <img src="./images/adobeAnalytics.jpeg" class="client__logo" alt="Adobe Analytics" />
+            </div>
+          </div>
+          <div class="square">
+            <div class="content">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="client__logo" alt="Power BI" />
+            </div>
+          </div>
+          <div class="square">
+            <div class="content">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" class="client__logo" alt="Cosmos " />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+          Please drop me an email at <FONT COLOR="#ff3258">vnairusa30@gmail.com</FONT> or give me a ring at <FONT COLOR="#ff3258">+1 (657)-767-9035</FONT>.
+        <!-- Replace the email with yours -->
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a href="https://github.com/varadnair30" class="btn">
+              <img src="./images/github.svg" class="footer__social-image" alt="Github">
+              Visit Github Profile
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="http://linkedin.com/in/varad-nair" class="btn">
+              <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+              Visit LinkedIn Profile
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
