@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #1de9b6;         /* accent */
+  --primary-dark: #159c94;          /* accent hover / darker */
+  --secondary-color: #222222;       /* main text */
+  --link-color: #1de9b6;            /* links */
+  --gradient-start: #6a11cb;        /* deep purple */
+  --gradient-end: #2575fc;          /* bright violet */
+  --background-color: #f7f9fc;      /* page background */
+  --card-bg: rgba(255, 255, 255, 0.85);  /* cards with slight translucency */
+  --text-dark: #222222;             /* text dark */
+  --text-muted: #444444;            /* muted text */
+}
+  
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: var(--text-dark);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
