@@ -71,10 +71,10 @@ const groupedSkills = [
         ),
       },
       {
-        name: "Azure DevOps",
+        name: "AWS",
         icon: (
           <img
-            src={process.env.PUBLIC_URL + "/azure.png"}
+            src={process.env.PUBLIC_URL + "/aws.png"}
             alt="Azure DevOps"
             style={{ width: "32px", height: "32px", objectFit: "contain" }}
           />

@@ -5,7 +5,7 @@ const experiences = [
     title: "Research Software Engineer",
     company: "Science & Engineering Innovation & Research Labs, University of Texas at Arlington",
     logo: "/companies/uta.png",
-    duration: "Mar 2025 – Present",
+    duration: "Jan 2025 – Present",
     location: "Arlington, TX",
     bullets: [
       "Developed AI-driven applications integrating Gemini LLMs (1.5-Flash & 1.5-Pro) with LangChain and FAISS, optimizing document-grounded Q&A pipelines and reducing hallucination errors by 40%",
@@ -40,7 +40,7 @@ const experiences = [
     "Optimized data warehousing processes by 50% through campaign analysis using Adobe Analytics, Python, SQL, and Power BI.",
     "Diagnosed and resolved over 30 production issues within tight deadlines, collaborating closely with QA, IT, and Operations teams to enhance system performance."
   ],
-  tech: ["Python", "SQL", "Azure DevOps", "Adobe Analytics", "Power BI", "COSMOS DB"],
+  tech: ["Python", "NoSQL", "Azure DevOps", "Adobe Analytics", "Power BI", "COSMOS DB"],
   },
   
 ];
