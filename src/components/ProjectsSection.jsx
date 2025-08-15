@@ -6,7 +6,7 @@ const projects = [
     description: "Built a scalable full-stack finance app with Django REST, React, Docker, OCR receipt scanning, and predictive analytics (85% accuracy).",
     tech: ["Django REST Framework", "React", "Docker", "OCR", "PostgreSQL", "CI/CD"],
     image: process.env.PUBLIC_URL + "/projects/smart-spend.jpeg",
-    github: "https://github.com/varadnair30/Smart-Spend",
+    github: "https://github.com/varadnair30/SmartSpend-AI-Expensetracker",
     demo: ""
   },
   {
