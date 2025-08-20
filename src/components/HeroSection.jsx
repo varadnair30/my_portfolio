@@ -10,9 +10,13 @@ import {
 import { useEffect, useState } from "react";
 
 const roles = [
-  "Graduate Research Assistant @ UTA",
-  "Full-Stack Engineer | 3+ YOE",
   "AI, Cloud & Full Stack Systems Specialist",
+  "Full-Stack Engineer | 3+ YOE",
+  "A passionate Musician ;)",
+  "Graduate Research Assistant @ UTA",
+  
+
+  
 ];
 
 export default function HeroSection() {
