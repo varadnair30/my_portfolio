@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 
 const roles = [
   "AI, Cloud & Full Stack Systems Specialist",
-  "Full-Stack Engineer | 3+ YOE",
+  "Full-Stack Engineer | 4+ YOE",
   "A passionate Musician ;)",
   "Graduate Research Assistant @ UTA",
   
