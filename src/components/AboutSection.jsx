@@ -6,7 +6,7 @@ export default function AboutSection() {
       <div className="container">
         <h2 className="text-center fw-bold mb-4">About Me</h2>
         <p className="lead text-muted text-center mb-4">
-          Software Engineer with 3+ years of experience building scalable backend systems and full-stack applications, specializing in AI integrations, cloud-native infrastructure, and DevOps automation. Proven collaborator known for delivering high-impact, user-centric software products with strong technical depth and a passion for optimization.
+          Software Engineer with 4+ years of experience building scalable backend systems and full-stack applications, specializing in AI integrations, cloud-native infrastructure, and DevOps automation. Proven collaborator known for delivering high-impact, user-centric software products with strong technical depth and a passion for optimization.
         </p>
         <p>
           I'm Varad Nair, recently completed my Masters in Computer Science at the University of Texas, Arlington on May 2025. I have experience working across both frontend and backend systems, and I focus on building solutions that are both efficient and impactful.

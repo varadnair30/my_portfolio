@@ -42,6 +42,20 @@ const experiences = [
   ],
   tech: ["Python", "NoSQL", "Azure DevOps", "Adobe Analytics", "Power BI", "COSMOS DB"],
   },
+  {
+    title: "Freelance Full-Stack Developer",
+    company: "Self-Employed / Remote",
+    logo: "/companies/freelancer.jpeg",
+    duration: "Jul 2020 – Dec 2022",
+    location: "Remote",
+    bullets: [
+      "Delivered 10+ full-stack web applications using Django REST, Spring Boot, React, Angular, and PostgreSQL, improving client operational efficiency by 40–60%",
+      "Built data-driven dashboards and analytics tools with Python, Pandas, Flask/Django, providing actionable insights to 200+ end-users",
+      "Deployed applications to AWS cloud using Docker and CI/CD pipelines, reducing deployment time by 50% and server downtime by 30%",
+      "Delivered 15+ secure REST APIs with authentication and access control, preventing potential data breaches and enhancing system reliability"
+    ],
+    tech: ["Django REST", "Spring Boot", "React", "Angular", "PostgreSQL", "Python", "Flask", "Pandas", "Docker", "AWS", "CI/CD", "APIs", "Authentication"],
+  },
   
 ];
 
