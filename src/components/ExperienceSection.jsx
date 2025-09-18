@@ -3,16 +3,18 @@ import React from "react";
 const experiences = [
   {
     title: "Research Software Engineer",
-    company: "Science & Engineering Innovation & Research Labs, University of Texas at Arlington",
+    company: "Sustainable and Efficient Allocation of Resources Lab (SEAR), University of Texas at Arlington",
     logo: "/companies/uta.png",
     duration: "Jan 2025 – Present",
     location: "Arlington, TX",
     bullets: [
-      "Developed AI-driven applications integrating Gemini LLMs (1.5-Flash & 1.5-Pro) with LangChain and FAISS, optimizing document-grounded Q&A pipelines and reducing hallucination errors by 40%",
-      "Engineered Python-based ML pipelines (TF-IDF + Logistic Regression) to classify warehouse management commands with 75%+ accuracy",
+      "Built production-ready RAG AI assistant reducing hallucinations by 40%, using BM25 + FAISS hybrid retrieval",
+      "Transitioned from cloud APIs to offline architecture with Ollama + Gemma 2B for low-latency and privacy-focused applications",
+      "Deployed LangChain-based AI workflows with FastAPI microservices and Docker, enabling scalable cross-platform integration",
+      "Automated CI/CD workflows with GitHub Actions, ensuring reliable deployments on AWS and testing for AI services",
       "Automated document retrieval workflows and improved API security, reducing manual intervention by 60% and ensuring compliance with GenAI best practices"
     ],
-    tech: ["Python", "Retrieval-Augmented Generation (RAG)","LangChain", "FAISS", "Gemini LLMs","BM25","Ollama","Gemma 2B", "TF-IDF", "Logistic Regression", "APIs", "Streamlit", "Pandas"],
+    tech: ["Python", "Retrieval-Augmented Generation (RAG)","LangChain", "FAISS", "Gemini LLMs","BM25","Ollama","Gemma 2B", "AWS", "FastAPI", "APIs", "Streamlit", "Pandas"],
   },
   {
     title: "Software Engineer Intern",
