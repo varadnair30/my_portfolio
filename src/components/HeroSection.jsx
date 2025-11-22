@@ -1,39 +1,15 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaFilePdf,
 } from "react-icons/fa";
-import { useEffect, useState } from "react";
-
-const roles = [
-  "AI, Cloud & Full Stack Systems Specialist",
-  "Full-Stack Engineer | 4+ YOE",
-  "A passionate Musician ;)",
-  "Graduate Research Assistant @ UTA",
-  
-
-  
-];
 
 export default function HeroSection() {
-  const [index, setIndex] = useState(0);
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start({ opacity: 1, y: 0 });
-    const interval = setInterval(() => {
-      controls.start({ opacity: 0, y: 20 }).then(() => {
-        setIndex((prev) => (prev + 1) % roles.length);
-        controls.start({ opacity: 1, y: 0 });
-      });
-    }, 2500);
-    return () => clearInterval(interval);
-  }, [controls]);
-
   return (
     <section
       id="hero"
@@ -64,14 +40,28 @@ export default function HeroSection() {
           {/* Right: Text Content */}
           <div className="col-md-6 text-center text-md-start fade-in">
             <h1 className="display-4 fw-bold mb-2">Varad Nair</h1>
-            <motion.h5
-              className="mb-4 text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
-              transition={{ duration: 0.6 }}
-            >
-              {roles[index]}
-            </motion.h5>
+            
+            <h5 className="mb-4 text-white" style={{ minHeight: "60px" }}>
+              <TypeAnimation
+                sequence={[
+                  'AI, Cloud & Full Stack Systems Specialist',
+                  2000,
+                  'Full-Stack Engineer | 4+ YOE',
+                  2000,
+                  'A passionate Musician ;)',
+                  2000,
+                  'Graduate Research Assistant @ UTA',
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                deletionSpeed={60}
+                repeat={Infinity}
+                cursor={true}
+                style={{ display: 'inline-block' }}
+              />
+            </h5>
+
             <p className="lead mb-4 text-light">
               Crafting scalable AI-driven applications and backend systems, with a passion for automation, cloud-native solutions, and performance optimization.
             </p>
@@ -123,7 +113,7 @@ export default function HeroSection() {
               ))}
             </div>
             <a href="#contact" className="btn btn-outline-light btn-sm px-4">
-              Let’s Connect
+              Let's Connect
             </a>
           </div>
         </div>

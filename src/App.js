@@ -14,9 +14,8 @@ import SideNav from "./components/SideNav";
 export default function App() {
   return (
     <>
-      {/* <Navbar /> */}
       <SideNav />
-      <main> {/* Padding to offset fixed navbar */} 
+      <main>
         <HeroSection />
         <AboutSection />
         <HighlightSection />
@@ -26,7 +25,7 @@ export default function App() {
         <TestimonialsSection />
         <CertificationsSection />
         <ContactSection />
-        {/* <ScrollToTopButton /> */}
+        <ScrollToTopButton />
       </main>
     </>
   );

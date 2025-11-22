@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function InternshipHighlight() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
   const images = [
     { src: "/images/SafariWorld.jpg", caption: "Safari World outing" },
     { src: "/images/YogaDay.jpg", caption: "Outdoor yoga with group" },
@@ -29,6 +34,11 @@ export default function InternshipHighlight() {
     ]
   };
 
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <section className="py-5 bg-white" id="ait-internship">
       <div className="container">
@@ -45,14 +55,21 @@ export default function InternshipHighlight() {
         <Slider {...settings}>
           {images.map(({ src, caption }, i) => (
             <div key={i} className="px-2">
-              <div className="internship-card shadow-sm border border-light-subtle overflow-hidden">
-                <div className="ratio ratio-4x3">
+              <div 
+                className="internship-card shadow-sm border border-light-subtle overflow-hidden"
+                onClick={() => openLightbox(i)}
+                style={{ cursor: 'pointer' }}
+              >
+                <div className="ratio ratio-4x3 position-relative">
                   <img
                     src={process.env.PUBLIC_URL + src}
                     alt={caption}
                     className="w-100 h-100 object-fit-cover"
                     loading="lazy"
                   />
+                  <div className="lightbox-overlay">
+                    <span className="zoom-icon">🔍</span>
+                  </div>
                 </div>
                 <div className="card-body text-center py-3">
                   <p className="mb-0 fw-medium small text-muted">{caption}</p>
@@ -61,6 +78,16 @@ export default function InternshipHighlight() {
             </div>
           ))}
         </Slider>
+
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          index={lightboxIndex}
+          slides={images.map(img => ({
+            src: process.env.PUBLIC_URL + img.src,
+            title: img.caption
+          }))}
+        />
       </div>
 
       <style>{`
@@ -73,11 +100,32 @@ export default function InternshipHighlight() {
           transform: translateY(-5px);
           box-shadow: 0 0 20px rgba(0,0,0,0.12) !important;
         }
+        .lightbox-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        .internship-card:hover .lightbox-overlay {
+          opacity: 1;
+        }
+        .zoom-icon {
+          font-size: 2.5rem;
+          color: white;
+          animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+        }
         .object-fit-cover {
           object-fit: cover;
         }
         
-        /* Slick carousel custom styling to match your portfolio */
         .slick-dots {
           bottom: -35px;
         }
@@ -113,7 +161,6 @@ export default function InternshipHighlight() {
           opacity: 1;
         }
         
-        /* Mobile responsiveness */
         @media (max-width: 768px) {
           .slick-prev {
             left: -25px;

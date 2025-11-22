@@ -1,157 +1,142 @@
-import React from "react";
-import {
-  SiPython, SiJavascript, SiTypescript, SiReact, SiRedux, SiNodedotjs, SiFlask,
-  SiMongodb, SiPostgresql, SiDocker, SiGit, SiCplusplus, SiMysql,
-  SiFastapi, SiTensorflow, SiJirasoftware, SiPostman, SiJsonwebtokens,
-  SiTestinglibrary, SiNextdotjs, SiExpress, SiDjango, SiHtml5, SiCss3,
-  SiSpringboot,
-  SiOracle,
-  SiAmazondynamodb,
-  SiKubernetes
-} from "react-icons/si";
-
-const groupedSkills = [
-  {
-    title: "Frontend & Web",
-    skills: [
-      { name: "React.js", icon: <SiReact /> },
-      { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "Redux", icon: <SiRedux /> },
-      { name: "JavaScript", icon: <SiJavascript /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "HTML5", icon: <SiHtml5 /> },
-      { name: "CSS3", icon: <SiCss3 /> },
-    ],
-  },
-  {
-    title: "Backend & API",
-    skills: [
-      { name: "Spring Boot", icon: <SiSpringboot /> },
-      { name: "Node.js", icon: <SiNodedotjs /> },
-      { name: "Express.js", icon: <SiExpress /> },
-      { name: "Flask", icon: <SiFlask /> },
-      { name: "FastAPI", icon: <SiFastapi /> },
-      { name: "Django", icon: <SiDjango /> },
-      { name: "REST APIs", icon: "text" },
-    ],
-  },
-  {
-    title: "Languages",
-    skills: [
-      { name: "Python", icon: <SiPython /> },
-      { name: "Java", icon: "text" },
-      { name: "C", icon: "text" },
-      { name: "C#", icon: "text" },
-      { name: "C++", icon: <SiCplusplus /> },
-      { name: "SQL", icon: "text" },
-    ],
-  },
-  {
-    title: "Databases",
-    skills: [
-      { name: "DynamoDB", icon: <SiAmazondynamodb /> },
-      { name: "Oracle DB", icon: <SiOracle /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "NoSQL", icon: "text" },
-      { name: "MySQL", icon: <SiMysql /> },
-    ],
-  },
-  {
-    title: "Cloud & DevOps",
-    skills: [
-      {
-        name: "Azure",
-        icon: (
-          <img
-            src={process.env.PUBLIC_URL + "/azure.png"}
-            alt="Azure"
-            style={{ width: "32px", height: "32px", objectFit: "contain" }}
-          />
-        ),
-      },
-      {
-        name: "AWS",
-        icon: (
-          <img
-            src={process.env.PUBLIC_URL + "/aws.png"}
-            alt="Azure DevOps"
-            style={{ width: "32px", height: "32px", objectFit: "contain" }}
-          />
-        ),
-      },
-      { name: "Docker", icon: <SiDocker /> },
-      { name: "Kubernetes", icon: <SiKubernetes /> },
-      { name: "CI/CD", icon: "text" },
-      { name: "Git", icon: <SiGit /> },
-    ],
-  },
-  {
-    title: "AI / Machine Learning",
-    skills: [
-      { name: "TensorFlow", icon: <SiTensorflow /> },
-      { name: "NLP", icon: "text" },
-      { name: "LLMs", icon: "text" },
-      { name: "Data Analytics", icon: "text" },
-    ],
-  },
-  {
-    title: "Testing & Tools",
-    skills: [
-      { name: "JWT", icon: <SiJsonwebtokens /> },
-      { name: "TDD", icon: <SiTestinglibrary /> },
-      { name: "Postman", icon: <SiPostman /> },
-      { name: "Jira", icon: <SiJirasoftware /> },
-      { name: "CLI", icon: "text" },
-      { name: "Linux", icon: "text" },
-      // { name: "Debugger", icon: "text" },
-    ],
-  },
-];
+import React, { useEffect, useRef, useState } from "react";
 
 export default function SkillsSection() {
+  const [animated, setAnimated] = useState(false);
+  const sectionRef = useRef(null);
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    // Small delay to ensure proper initialization
+    const timer = setTimeout(() => {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !animated) {
+              setTimeout(() => setAnimated(true), 200);
+            }
+          });
+        },
+        { 
+          threshold: 0.2,
+          rootMargin: "-50px"
+        }
+      );
+
+      if (sectionRef.current) {
+        observerRef.current.observe(sectionRef.current);
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      if (observerRef.current && sectionRef.current) {
+        observerRef.current.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const skillCategories = [
+    {
+      category: "Frontend & Web",
+      skills: [
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 85 },
+        { name: "Redux", level: 80 },
+        { name: "HTML5", level: 95 },
+        { name: "CSS3", level: 90 },
+        { name: "TypeScript", level: 85 },
+      ],
+    },
+    {
+      category: "Backend & API",
+      skills: [
+        { name: "Spring Boot", level: 90 },
+        { name: "Node.js", level: 85 },
+        { name: "Express.js", level: 85 },
+        { name: "Django", level: 88 },
+        { name: "FastAPI", level: 87 },
+        { name: "REST APIs", level: 92 },
+      ],
+    },
+    {
+      category: "Languages",
+      skills: [
+        { name: "Python", level: 92 },
+        { name: "Java", level: 88 },
+        { name: "C", level: 82 },
+        { name: "JavaScript", level: 90 },
+        { name: "SQL", level: 90 },
+        { name: "C#", level: 85 },
+      ],
+    },
+    {
+      category: "Databases",
+      skills: [
+        { name: "PostgreSQL", level: 90 },
+        { name: "MySQL", level: 88 },
+        { name: "MongoDB", level: 85 },
+        { name: "Firebase", level: 82 },
+        { name: "Neo4j", level: 80 },
+      ],
+    },
+    {
+      category: "Cloud & DevOps",
+      skills: [
+        { name: "AWS", level: 85 },
+        { name: "Docker", level: 88 },
+        { name: "Kubernetes", level: 82 },
+        { name: "CI/CD", level: 87 },
+        { name: "Azure", level: 80 },
+        { name: "Git", level: 92 },
+      ],
+    },
+    {
+      category: "AI / Machine Learning",
+      skills: [
+        { name: "TensorFlow", level: 85 },
+        { name: "PyTorch", level: 85 },
+        { name: "scikit-learn", level: 88 },
+        { name: "NLP", level: 80 },
+        { name: "Data Analysis", level: 87 },
+        { name: "Pandas", level: 90 },
+      ],
+    },
+  ];
+
   return (
-    <section className="py-5 bg-light" id="skills">
+    <section className="py-5 bg-light" id="skills" ref={sectionRef}>
       <div className="container">
-        <h2 className="text-center fw-bold mb-4">Technical Skills</h2>
-        <p className="text-center mb-5 fs-6">
-          Tools and technologies I’ve used across full-stack development, cloud infrastructure, and AI workflows
+        <h2 className="text-center fw-bold mb-5">Technical Skills</h2>
+        <p className="text-center mb-5 text-muted">
+          Tools and technologies I've used across full-stack development, cloud infrastructure, and AI workflows
         </p>
 
         <div className="row g-4">
-          {groupedSkills.map((group, i) => (
-            <div key={i} className="col-12 col-md-6 col-lg-4">
-              <div className="p-4 border rounded shadow-sm bg-white h-100">
-                <h6 className="fw-semibold text-primary mb-3">{group.title}</h6>
-                <div className="d-flex flex-wrap gap-4">
-                  {group.skills.map((skill, j) => (
-                    <div
-                      key={j}
-                      className="text-center skill-icon"
-                      style={{ width: "80px", cursor: "default" }}
-                    >
-                      <div className="mb-1">
-                        {skill.icon === "text" ? (
-                          <div
-                            className="rounded-circle bg-secondary text-white d-flex justify-content-center align-items-center mx-auto"
-                            style={{ width: "32px", height: "32px", fontSize: "12px" }}
-                          >
-                            {skill.name[0]}
-                          </div>
-                        ) : typeof skill.icon === "string" ? (
-                          <img
-                            src={skill.icon}
-                            alt={skill.name}
-                            style={{ width: "32px", height: "32px", objectFit: "contain" }}
-                          />
-                        ) : (
-                          React.cloneElement(skill.icon, { size: 32 })
-                        )}
-                      </div>
-                      <small className="fw-medium">{skill.name}</small>
+          {skillCategories.map((category, idx) => (
+            <div className="col-md-6 col-lg-4" key={idx}>
+              <div className="skills-card">
+                <h5 className="fw-bold mb-4" style={{ color: "#0d6efd" }}>
+                  {category.category}
+                </h5>
+                {category.skills.map((skill, i) => (
+                  <div key={i} className="skill-item mb-3">
+                    <div className="d-flex justify-content-between mb-2">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-level fw-bold">
+                        {animated ? `${skill.level}%` : "0%"}
+                      </span>
                     </div>
-                  ))}
-                </div>
+                    <div className="progress-container">
+                      <div
+                        className="progress-bar-custom"
+                        style={{
+                          width: animated ? `${skill.level}%` : "0%",
+                          transitionDelay: animated ? `${i * 0.1}s` : "0s",
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -159,14 +144,85 @@ export default function SkillsSection() {
       </div>
 
       <style>{`
-        .skill-icon {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .skills-card {
+          background: white;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+          height: 100%;
         }
-        .skill-icon:hover {
-          transform: translateY(-4px) scale(1.05);
-          box-shadow: 0 0 12px rgba(0, 123, 255, 0.2);
-          background-color: #f8f9fa;
-          border-radius: 8px;
+
+        .skills-card:hover {
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+          transform: translateY(-5px);
+        }
+
+        .skill-item {
+          opacity: 1;
+        }
+
+        .progress-container {
+          background-color: #e9ecef;
+          border-radius: 10px;
+          overflow: hidden;
+          height: 8px;
+          width: 100%;
+        }
+
+        .progress-bar-custom {
+          background: linear-gradient(90deg, #0d6efd 0%, #0b5ed7 100%);
+          height: 100%;
+          border-radius: 10px;
+          transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .skill-name {
+          font-size: 0.95rem;
+          color: #495057;
+          font-weight: 500;
+        }
+
+        .skill-level {
+          color: #0d6efd;
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+          .skills-card {
+            padding: 1rem;
+          }
+
+          .skill-name {
+            font-size: 0.85rem;
+          }
+
+          .skill-level {
+            font-size: 0.8rem;
+          }
+
+          .col-md-6 {
+            margin-bottom: 1rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .skills-card {
+            padding: 1rem;
+          }
+
+          h5 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem !important;
+          }
+
+          .skill-item {
+            margin-bottom: 1.5rem !important;
+          }
+
+          .progress-container {
+            height: 6px;
+          }
         }
       `}</style>
     </section>
