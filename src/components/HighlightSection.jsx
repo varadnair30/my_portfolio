@@ -7,7 +7,7 @@ export default function InternshipHighlight() {
   const images = [
     { src: "/images/SafariWorld.jpg", caption: "Safari World outing" },
     { src: "/images/YogaDay.jpg", caption: "Outdoor yoga with group" },
-    { src: "/images/AITGroup.jpg", caption: "Group award ceremony" },
+    { src: "/images/AITgroup.jpg", caption: "Group award ceremony" },
     { src: "/images/SCIPark.jpg", caption: "Thailand Scientific Park" },
     { src: "/images/AITnight.jpg", caption: "AIT Entrance" },
     { src: "/images/AITCampus.jpg", caption: "Beautiful AIT campus views" },
