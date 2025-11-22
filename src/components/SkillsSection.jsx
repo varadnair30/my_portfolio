@@ -12,20 +12,21 @@ export default function SkillsSection() {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !animated) {
-              setTimeout(() => setAnimated(true), 200);
+              // Additional delay before animation
+              setTimeout(() => setAnimated(true), 300);
             }
           });
         },
         { 
-          threshold: 0.2,
-          rootMargin: "-50px"
+          threshold: 0.1,  // Lower threshold for mobile
+          rootMargin: "-100px 0px"  // Must scroll 100px past before triggering
         }
       );
 
       if (sectionRef.current) {
         observerRef.current.observe(sectionRef.current);
       }
-    }, 100);
+    }, 150);
 
     return () => {
       clearTimeout(timer);
@@ -190,15 +191,15 @@ export default function SkillsSection() {
 
         @media (max-width: 768px) {
           .skills-card {
-            padding: 1rem;
+            padding: 1.25rem;
           }
 
           .skill-name {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
           }
 
           .skill-level {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
           }
 
           .col-md-6 {
@@ -222,6 +223,14 @@ export default function SkillsSection() {
 
           .progress-container {
             height: 6px;
+          }
+
+          .skill-name {
+            font-size: 0.85rem;
+          }
+
+          .skill-level {
+            font-size: 0.8rem;
           }
         }
       `}</style>
