@@ -2,6 +2,7 @@ import React from "react";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
+import HighlightSection from "./components/HighlightSection";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -18,6 +19,7 @@ export default function App() {
       <main> {/* Padding to offset fixed navbar */} 
         <HeroSection />
         <AboutSection />
+        <HighlightSection />
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
