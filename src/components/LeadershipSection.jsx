@@ -16,7 +16,7 @@ export default function LeadershipSection() {
       title: "Technical Speaker & Presenter",
       organization: "TEDx-Style Tech Events",
       description: "Delivered technical presentations on emerging technologies and software engineering best practices to audiences of 200+ students and faculty. Specialized in making complex AI/ML and cloud architecture topics accessible.",
-      image: process.env.PUBLIC_URL + "/leadership/MyStage.jpg",
+      image: process.env.PUBLIC_URL + "/leadership/MyStage.JPG",
       tags: ["Public Speaking", "Technical Communication", "Mentorship"],
       impact: "Conducted 10+ technical talks reaching 500+ students",
       imagePosition: "center center"
