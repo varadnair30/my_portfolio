@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollToTopButton from "./components/ScrollToTopButton";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import HighlightSection from "./components/HighlightSection";
@@ -25,7 +24,7 @@ export default function App() {
         <TestimonialsSection />
         <CertificationsSection />
         <ContactSection />
-        <ScrollToTopButton />
+        
       </main>
     </>
   );
