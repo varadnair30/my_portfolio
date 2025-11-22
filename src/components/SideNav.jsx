@@ -9,12 +9,14 @@ import {
   FaEnvelope,
   FaBriefcase,
   FaBars,
-  FaTimes
+  FaTimes,
+  FaTrophy
 } from "react-icons/fa";
 
 const sections = [
   { id: "home", icon: <FaHome />, label: "Home" },
   { id: "about", icon: <FaUser />, label: "About" },
+  { id: "leadership", icon: <FaTrophy />, label: "Leadership" },
   { id: "skills", icon: <FaCode />, label: "Skills" },
   { id: "experience", icon: <FaBriefcase />, label: "Experience" },
   { id: "projects", icon: <FaProjectDiagram />, label: "Projects" },

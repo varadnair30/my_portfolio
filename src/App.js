@@ -9,6 +9,8 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import CertificationsSection from "./components/CertificationsSection";
 import ContactSection from "./components/ContactSection";
 import SideNav from "./components/SideNav";
+import LeadershipSection from './components/LeadershipSection';
+
 
 export default function App() {
   return (
@@ -18,6 +20,7 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <HighlightSection />
+        <LeadershipSection />
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
