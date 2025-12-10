@@ -88,6 +88,7 @@ export default function SkillsSection() {
         { name: "Kubernetes", level: 82 },
         { name: "CI/CD", level: 87 },
         { name: "Azure", level: 80 },
+        { name: "GCP", level: 76 },
         { name: "Git", level: 92 },
       ],
     },

@@ -8,13 +8,13 @@ const experiences = [
     duration: "Jan 2025 – Present",
     location: "Arlington, TX",
     bullets: [
-      "Built production-ready RAG AI assistant reducing hallucinations by 40%, using BM25 + FAISS hybrid retrieval",
-      "Transitioned from cloud APIs to offline architecture with Ollama + Gemma 2B for low-latency and privacy-focused applications",
-      "Deployed LangChain-based AI workflows with FastAPI microservices and Docker, enabling scalable cross-platform integration",
-      "Automated CI/CD workflows with GitHub Actions, ensuring reliable deployments on AWS and testing for AI services",
-      "Automated document retrieval workflows and improved API security, reducing manual intervention by 60% and ensuring compliance with GenAI best practices"
+        "Built production-ready RAG AI assistant reducing hallucinations by 40%, using BM25 + FAISS hybrid retrieval",
+        "Engineered real-time AI panel transcription system with multi-speaker diarization processing live audio via WebSocket → Whisper STT → Phi → Stable Diffusion for automated visual generation within 1-2 seconds",
+        "Designed FastAPI microservices coordinating speech-to-text (AssemblyAI), LLM summarization (Ollama), and text-to-image pipelines (SD, Pollinations.ai), enabling seamless multi-modal AI workflows",
+        "Transitioned from cloud APIs to offline architecture with Ollama + Gemma 2B for low-latency and privacy-focused applications",
+        "Automated CI/CD workflows with GitHub Actions, ensuring reliable deployments on AWS and Docker containerization for scalable infrastructure"
     ],
-    tech: ["Python", "Retrieval-Augmented Generation (RAG)","LangChain", "FAISS", "Gemini LLMs","BM25","Ollama","Gemma 2B", "AWS", "FastAPI", "APIs", "Streamlit", "Pandas"],
+    tech: ["Python", "RAG", "LangChain", "FAISS", "Whisper", "Stable Diffusion", "Ollama", "Gemma 2B", "BM25", "AWS", "FastAPI", "Docker", "AssemblyAI", "WebSocket", "Streamlit", "Pandas"],
   },
   {
     title: "Software Engineer Intern",

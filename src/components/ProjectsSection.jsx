@@ -2,6 +2,14 @@ import React, { useState } from "react";
 
 const projects = [
   {
+    title: "Sandboxing: API Executor with NsJail",
+    description: "Built a secure Python code execution API with NsJail isolation on Google Cloud Run. Solved Cloud Run compatibility challenges by implementing read-only bind mounts for filesystem isolation, achieving production-ready sandboxing without elevated privileges.",
+    tech: ["Python", "Flask", "NsJail", "Docker", "Google Cloud Run", "REST API", "Security"],
+    image: process.env.PUBLIC_URL + "/projects/sandboxing.png",
+    github: "https://github.com/varadnair30/python-executor",
+    demo: "https://python-executor-wddqxxteba-uc.a.run.app"
+  }
+  ,{
     title: "Smart Spend – AI-Powered Finance Manager",
     description: "Built a scalable full-stack finance app with Django REST, React, Docker, OCR receipt scanning, and predictive analytics (85% accuracy).",
     tech: ["Django REST Framework", "React", "Docker", "OCR", "PostgreSQL", "CI/CD"],
