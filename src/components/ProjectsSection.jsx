@@ -2,6 +2,14 @@ import React, { useState } from "react";
 
 const projects = [
   {
+    title: "ReachCraft: AI-powered job application automation",
+    description: "Free tool to generate cover emails and FREE alternative for (Hunter.io, Apollo.io,etc.) to get unlimited emails for cold emailing. Job seekers send 200+ applications before landing an offer, with cold applications having only a 0.1-2% success rate. The challenge? Personalizing hundreds of cold emails is impossible while job search stress.",
+    tech: ["Python", "FastAPI", "Supabase", "GitHub", "Render", "REST API"],
+    image: process.env.PUBLIC_URL + "/projects/ReachCraft.png",
+    github: "https://github.com/varadnair30/ReachCraft",
+    demo: "https://reachcraft-frontend.onrender.com/"
+  }
+  ,{
     title: "Sandboxing: API Executor with NsJail",
     description: "Built a secure Python code execution API with NsJail isolation on Google Cloud Run. Solved Cloud Run compatibility challenges by implementing read-only bind mounts for filesystem isolation, achieving production-ready sandboxing without elevated privileges.",
     tech: ["Python", "Flask", "NsJail", "Docker", "Google Cloud Run", "REST API", "Security"],
