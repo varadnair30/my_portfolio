@@ -21,7 +21,7 @@ export default function FooterSection() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/varad-nair"
+            href="https://linkedin.com/in/nvarad/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-light mx-3 fs-4"

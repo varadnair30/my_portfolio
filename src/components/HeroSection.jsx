@@ -73,7 +73,7 @@ export default function HeroSection() {
                 },
                 {
                   icon: <FaLinkedin />,
-                  link: "https://linkedin.com/in/varad-nair",
+                  link: "https://linkedin.com/in/nvarad",
                 },
                 {
                   icon: (
