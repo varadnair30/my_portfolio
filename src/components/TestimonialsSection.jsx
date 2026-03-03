@@ -1,35 +1,7 @@
 import React, { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-const testimonials = [
-  {
-    name: "Amit Kumar Singhai",
-    title: "Senior Associate Consultant",
-    linkedIn: "https://www.linkedin.com/in/amit-kumar-singhai/",
-    image: process.env.PUBLIC_URL + "/testimonials/amit-singhai.jpeg",
-    text: `I had the pleasure of working with Varad at Tata Consultancy Services, where he consistently demonstrated strong problem-solving abilities and a collaborative spirit. In his role, Varad handled complex data-driven deliverables with precision, using his analytical thinking to identify and address inefficiencies, which led to measurable operational improvements. His critical thinking was especially evident when resolving high-priority production issues, where he worked seamlessly with cross-functional teams to ensure optimal system performance. Varad’s commitment to delivering quality solutions and his proactive approach made him a reliable and highly valued team player. I’m confident he’ll continue to excel in any future endeavor`,
-    color: "hsl(124, 70%, 85%)",
-  },
-  {
-    name: "Ashwinkumar S Padale",
-    title: "Senior Systems Integration Engineer",
-    linkedIn: "https://www.linkedin.com/in/ashwwin24/",
-    image: process.env.PUBLIC_URL + "/testimonials/ashwin.jpeg",
-    text: `I had the pleasure of working closely with Varad during his Summer 2024 internship at Mavenir. As his senior colleague, I was consistently impressed by his proactive approach, technical aptitude, and ability to collaborate effectively with cross-functional teams. Varad played a key role in optimizing our infrastructure, significantly improving performance and reducing manual errors through automation. His contributions to our CI/CD environment and back-end development were invaluable, and his dedication to ensuring scalability and reliability made a noticeable impact on our projects. I highly recommend Varad for any role that requires strong problem-solving skills and a solid technical foundation.`,
-    color: "hsla(184, 71%, 85%, 1.00)",
-  },
-  {
-    name: "Owen Turnbull",
-    title: "Technical Project/Program Manager",
-    linkedIn: "https://www.linkedin.com/in/owen-turnbull/",
-    image: process.env.PUBLIC_URL + "/testimonials/owen.jpeg",
-    text: `For anyone seeking a dedicated and highly capable Engineer, Varad is the person you need. During our time working together at Mavenir, I was consistently impressed by his professionalism, clarity of thought, and methodical problem-solving abilities. One particular instance that stands out was when Varad assisted me in troubleshooting a complex Python-based automation script. His structured approach to debugging, combined with his ability to break down the problem and communicate solutions clearly, showcased his strong technical foundation and maturity beyond his experience level.
-
-    Varad’s passion for engineering and his proactive attitude make him a standout team player. He doesn’t just solve problems — he ensures long-term solutions by understanding the root cause and improving processes wherever possible. I have no doubt that Varad will excel in his future endeavors and grow into a top-tier engineer in any organization he joins`,
-    color: "hsla(67, 71%, 85%, 1.00)",
-  },
-];
+import { testimonials } from "../portfolio/knowledgeBase";
 
 function getInitials(name) {
   const parts = name.trim().split(" ");

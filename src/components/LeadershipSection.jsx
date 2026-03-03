@@ -1,27 +1,8 @@
 import React from "react";
-//check commit
+import { leadership } from "../portfolio/knowledgeBase";
 
 export default function LeadershipSection() {
-  const achievements = [
-    {
-      title: "Featured Campus Ambassador",
-      organization: "United Group of Institutions",
-      description: "Selected as the face of first-year student experience at United Group of Institutions, representing 3,000+ students. Led orientation initiatives and served as a bridge between administration and incoming students.",
-      image: process.env.PUBLIC_URL + "/leadership/MyUGIposter.jpeg",
-      tags: ["Leadership", "Student Advocacy", "Public Relations"],
-      impact: "Represented institution across 5+ promotional campaigns",
-      imagePosition: "left center" // Focus on left side with text
-    },
-    {
-      title: "Technical Speaker & Presenter",
-      organization: "TEDx-Style Tech Events",
-      description: "Delivered technical presentations on emerging technologies and software engineering best practices to audiences of 200+ students and faculty. Specialized in making complex AI/ML and cloud architecture topics accessible.",
-      image: process.env.PUBLIC_URL + "/leadership/MyStage.JPG",
-      tags: ["Public Speaking", "Technical Communication", "Mentorship"],
-      impact: "Conducted 10+ technical talks reaching 500+ students",
-      imagePosition: "center center"
-    }
-  ];
+  const achievements = leadership.achievements;
 
   return (
     <section className="py-5 bg-white" id="leadership">
@@ -76,30 +57,14 @@ export default function LeadershipSection() {
         <div className="competencies-section mt-5">
           <h5 className="text-center fw-bold mb-4">Core Leadership Competencies</h5>
           <div className="row g-3">
-            <div className="col-md-3 col-6">
-              <div className="competency-card">
-                <div className="competency-icon">🎤</div>
-                <div className="competency-name">Public Speaking</div>
+            {leadership.competencies.map((c) => (
+              <div className="col-md-3 col-6" key={c.name}>
+                <div className="competency-card">
+                  <div className="competency-icon">{c.icon}</div>
+                  <div className="competency-name">{c.name}</div>
+                </div>
               </div>
-            </div>
-            <div className="col-md-3 col-6">
-              <div className="competency-card">
-                <div className="competency-icon">👥</div>
-                <div className="competency-name">Team Leadership</div>
-              </div>
-            </div>
-            <div className="col-md-3 col-6">
-              <div className="competency-card">
-                <div className="competency-icon">📢</div>
-                <div className="competency-name">Technical Communication</div>
-              </div>
-            </div>
-            <div className="col-md-3 col-6">
-              <div className="competency-card">
-                <div className="competency-icon">🎯</div>
-                <div className="competency-name">Student Advocacy</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

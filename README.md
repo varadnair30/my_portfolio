@@ -39,6 +39,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Portfolio RAG Chat
+
+The site includes an **Ask about Varad** chatbot that answers only from this portfolio (projects, experience, skills, etc.). It refuses to answer off-topic or personal questions with: *"I don't have information about it."*
+
+The chat uses **Google Gemini** (free tier). You need a [Gemini API key](https://aistudio.google.com/apikey) and to deploy the worker.
+
+**If you see "Chat isn't connected yet" or connection errors:** the backend is not set up yet. See **[CHAT_SETUP.md](./CHAT_SETUP.md)** for step-by-step instructions and where to set your Gemini API key.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

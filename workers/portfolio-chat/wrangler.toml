@@ -1,0 +1,20 @@
+name = "varad-portfolio-chat"
+main = "src/index.js"
+compatibility_date = "2026-03-01"
+
+[vars]
+# URL of your deployed RAG index (from npm run rag:build, then deploy site).
+# Example:
+PORTFOLIO_INDEX_URL = "https://varadnair30.github.io/my_portfolio/rag/portfolio-index.json"
+
+# Guardrails / retrieval
+SIMILARITY_THRESHOLD = "0.45"
+TOP_K = "6"
+INDEX_CACHE_TTL_MS = "600000"
+
+# Gemini (free tier) – set GEMINI_API_KEY via: wrangler secret put GEMINI_API_KEY
+GEMINI_EMBED_MODEL = "gemini-embedding-001"
+GEMINI_CHAT_MODEL = "gemini-2.5-flash"
+
+ALLOWED_ORIGINS = "*"
+DEBUG = "0"

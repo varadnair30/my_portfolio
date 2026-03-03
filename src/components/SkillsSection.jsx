@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { skillCategories } from "../portfolio/knowledgeBase";
 
 export default function SkillsSection() {
   const [animated, setAnimated] = useState(false);
@@ -35,75 +36,6 @@ export default function SkillsSection() {
       }
     };
   }, []);
-
-  const skillCategories = [
-    {
-      category: "Frontend & Web",
-      skills: [
-        { name: "React.js", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Redux", level: 80 },
-        { name: "HTML5", level: 95 },
-        { name: "CSS3", level: 90 },
-        { name: "TypeScript", level: 85 },
-      ],
-    },
-    {
-      category: "Backend & API",
-      skills: [
-        { name: "Spring Boot", level: 90 },
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 85 },
-        { name: "Django", level: 88 },
-        { name: "FastAPI", level: 87 },
-        { name: "REST APIs", level: 92 },
-      ],
-    },
-    {
-      category: "Languages",
-      skills: [
-        { name: "Python", level: 92 },
-        { name: "Java", level: 88 },
-        { name: "C", level: 82 },
-        { name: "JavaScript", level: 90 },
-        { name: "SQL", level: 90 },
-        { name: "C#", level: 85 },
-      ],
-    },
-    {
-      category: "Databases",
-      skills: [
-        { name: "PostgreSQL", level: 90 },
-        { name: "MySQL", level: 88 },
-        { name: "MongoDB", level: 85 },
-        { name: "Firebase", level: 82 },
-        { name: "Neo4j", level: 80 },
-      ],
-    },
-    {
-      category: "Cloud & DevOps",
-      skills: [
-        { name: "AWS", level: 85 },
-        { name: "Docker", level: 88 },
-        { name: "Kubernetes", level: 82 },
-        { name: "CI/CD", level: 87 },
-        { name: "Azure", level: 80 },
-        { name: "GCP", level: 76 },
-        { name: "Git", level: 92 },
-      ],
-    },
-    {
-      category: "AI / Machine Learning",
-      skills: [
-        { name: "TensorFlow", level: 85 },
-        { name: "PyTorch", level: 85 },
-        { name: "scikit-learn", level: 88 },
-        { name: "NLP", level: 80 },
-        { name: "Data Analysis", level: 87 },
-        { name: "Pandas", level: 90 },
-      ],
-    },
-  ];
 
   return (
     <section className="py-5 bg-light" id="skills" ref={sectionRef}>

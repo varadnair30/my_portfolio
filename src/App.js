@@ -9,13 +9,14 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import CertificationsSection from "./components/CertificationsSection";
 import ContactSection from "./components/ContactSection";
 import SideNav from "./components/SideNav";
-import LeadershipSection from './components/LeadershipSection';
-
+import LeadershipSection from "./components/LeadershipSection";
+import PortfolioChatbot from "./components/PortfolioChatbot";
 
 export default function App() {
   return (
     <>
       <SideNav />
+      <PortfolioChatbot />
       <main>
         <HeroSection />
         <AboutSection />

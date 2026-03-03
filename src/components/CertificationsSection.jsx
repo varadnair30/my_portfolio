@@ -1,25 +1,5 @@
 import React from "react";
-
-const certifications = [
-  {
-    name: "Microsoft Certified: Bing Ads Fundamentals",
-    issuer: "Microsoft",
-    badge: process.env.PUBLIC_URL + "/certs/microsoft.png",
-    link: "https://drive.google.com/file/d/1LikUf4tcicgIpy86kEd2bI1x8gXp-WAP/view?usp=sharing",
-  },
-  {
-    name: "Kubernetes for Developers: Core Concepts",
-    issuer: "Linkedin Learning",
-    badge: process.env.PUBLIC_URL + "/certs/kubernetes.png",
-    link: "https://www.linkedin.com/learning/certificates/85bd9fed3f3f77e21cd57b8c61b68c78c8c6388c36eee0eb23170110c5bb2e24",
-  },
-  {
-    name: "Software Engineer Certification",
-    issuer: "HackerRank",
-    badge: process.env.PUBLIC_URL + "/certs/hackerrank.jpg",
-    link: "https://www.hackerrank.com/certificates/386367939bae",
-  }
-];
+import { certifications } from "../portfolio/knowledgeBase";
 
 export default function CertificationsSection() {
   return (

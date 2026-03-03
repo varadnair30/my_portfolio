@@ -4,20 +4,13 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { highlights } from "../portfolio/knowledgeBase";
 
 export default function InternshipHighlight() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const images = [
-    { src: "/images/SafariWorld.jpg", caption: "Safari World outing" },
-    { src: "/images/YogaDay.jpg", caption: "Outdoor yoga with group" },
-    { src: "/images/AITgroup.jpg", caption: "Group award ceremony" },
-    { src: "/images/SCIPark.jpg", caption: "Thailand Scientific Park" },
-    { src: "/images/AITnight.jpg", caption: "AIT Entrance" },
-    { src: "/images/AITCampus.jpg", caption: "Beautiful AIT campus views" },
-    { src: "/images/WorldLeaders.jpg", caption: "AIT Faculty & Leaders" }
-  ];
+  const { images, title, subtitle, description } = highlights.aitInternship;
 
   const settings = {
     dots: true,
@@ -43,13 +36,13 @@ export default function InternshipHighlight() {
     <section className="py-5 bg-white" id="ait-internship">
       <div className="container">
         <h2 className="text-center fw-bold mb-3">
-          🌏 AIT Summer Research Internship, Thailand (2019)
+          {title}
         </h2>
         <p className="text-center mb-2 text-muted fs-6">
-          Selected as <strong>1 of 72</strong> out of <strong>3,000</strong> students for an international education camp at Asian Institute of Technology.
+          {subtitle}
         </p>
         <p className="text-center mb-5 text-muted fs-6">
-          The experience offered invaluable exposure to global perspectives in technology, collaborative research, and personal growth.
+          {description}
         </p>
 
         <Slider {...settings}>
