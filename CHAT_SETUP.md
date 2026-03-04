@@ -102,6 +102,32 @@ By default the app uses a placeholder URL. To use **your** worker:
 
 ---
 
+## 5. Updating portfolio content (adding new projects, experience, etc.)
+
+The chatbot reads from a static index built at deploy time — it has **no automatic awareness of changes**. Every time you update your portfolio, do these 3 steps:
+
+**Step 1 — Update the knowledge base**
+
+Edit `src/portfolio/knowledgeBase.mjs` and add your new project, experience, certification, etc.
+
+**Step 2 — Rebuild the RAG index** (from project root):
+
+```powershell
+$env:GEMINI_API_KEY = "your-gemini-key-here"
+npm run rag:build
+```
+
+**Step 3 — Redeploy the site** (publishes the updated index):
+
+```powershell
+npm run build
+npm run deploy
+```
+
+That's it. The worker does **not** need to be redeployed unless you change `wrangler.toml` settings.
+
+---
+
 ## Summary
 
 | Where | What to set |

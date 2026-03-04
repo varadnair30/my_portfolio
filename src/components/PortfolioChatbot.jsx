@@ -25,6 +25,47 @@ function TypingIndicator() {
   );
 }
 
+function renderInline(str) {
+  const parts = str.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) =>
+    part.startsWith("**") && part.endsWith("**")
+      ? <strong key={i}>{part.slice(2, -2)}</strong>
+      : part
+  );
+}
+
+function renderMarkdown(text) {
+  if (!text) return null;
+  const lines = text.split("\n");
+  const elements = [];
+  let listItems = [];
+  let k = 0;
+
+  const flushList = () => {
+    if (!listItems.length) return;
+    elements.push(
+      <ul key={k++} className="portfolio-chat-md-list">
+        {listItems.map((item, i) => <li key={i}>{renderInline(item)}</li>)}
+      </ul>
+    );
+    listItems = [];
+  };
+
+  for (const line of lines) {
+    const bullet = line.match(/^\s*\*+\s+(.*)/);
+    if (bullet) {
+      listItems.push(bullet[1].trim());
+    } else {
+      flushList();
+      if (line.trim()) {
+        elements.push(<p key={k++} className="portfolio-chat-md-p">{renderInline(line)}</p>);
+      }
+    }
+  }
+  flushList();
+  return elements;
+}
+
 function MessageBubble({ role, content, sources = [], onSourceClick }) {
   const isUser = role === "user";
   return (
@@ -35,7 +76,7 @@ function MessageBubble({ role, content, sources = [], onSourceClick }) {
       transition={{ duration: 0.25 }}
     >
       <div className="portfolio-chat-bubble-inner">
-        {content}
+        {isUser ? content : renderMarkdown(content)}
         {!isUser && sources?.length > 0 && (
           <div className="portfolio-chat-sources">
             <span className="portfolio-chat-sources-label">See more:</span>
@@ -387,8 +428,23 @@ export default function PortfolioChatbot() {
         .portfolio-chat-bubble-inner {
           font-size: 0.9rem;
           line-height: 1.5;
-          white-space: pre-wrap;
           word-break: break-word;
+        }
+        .portfolio-chat-md-p {
+          margin: 0 0 6px;
+        }
+        .portfolio-chat-md-p:last-child {
+          margin-bottom: 0;
+        }
+        .portfolio-chat-md-list {
+          margin: 4px 0 6px;
+          padding-left: 18px;
+        }
+        .portfolio-chat-md-list li {
+          margin-bottom: 4px;
+        }
+        .portfolio-chat-md-list li:last-child {
+          margin-bottom: 0;
         }
         .portfolio-chat-sources {
           margin-top: 12px;
