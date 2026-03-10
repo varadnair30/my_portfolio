@@ -16,11 +16,8 @@ export const about = {
   lead:
     "Software Engineer with 4+ years of experience building scalable backend systems and full-stack applications, specializing in AI integrations, cloud-native infrastructure, and DevOps automation. Proven collaborator known for delivering high-impact, user-centric software products with strong technical depth and a passion for optimization.",
   paragraphs: [
-    "I'm Varad Nair, recently completed my Masters in Computer Science at the University of Texas, Arlington on May 2025. I have experience working across both frontend and backend systems, and I focus on building solutions that are both efficient and impactful.",
-    "At Mavenir Systems, I pioneered backend network infrastructure and monitoring solutions using Python and Kubernetes, streamlining processes and improving scalability. I collaborated with 5+ cross-functional teams to optimize cloud infrastructure, enhance CI/CD workflows, and automate operational tasks using Bash scripting, leading to a 40% reduction in manual errors and deployment times.",
-    "During my time at Tata Consultancy Services, I spearheaded data-driven projects analyzing terabytes of business data using Python, SQL, and Azure DevOps to identify process inefficiencies. I developed backend services for customer-facing applications, optimized data warehousing processes by 50%, and resolved over 30 production issues while working in agile teams, ensuring high-quality software delivery.",
-    "I enjoy solving practical problems with AI and automation. Notable projects include Smart Spend, an AI-powered finance manager with predictive analytics built using Django and React, and Secure Phone Book, a role-based API platform ensuring secure access to sensitive contact information. I've also developed machine learning pipelines using TensorFlow and PyTorch for sentiment analysis tasks.",
-    "Outside of work, I'm passionate about continuous learning, DevOps practices, and breaking down complex systems into simple, maintainable components that drive impactful solutions. When I'm not coding, you'll probably find me at table tennis clubs, unwinding at cafés, or gaming my way through the evenings.",
+    "I'm Varad Nair — a Software Engineer with a Master's in Computer Science from the University of Texas at Arlington and 4+ years of experience building production-ready backend systems, AI-powered applications, and cloud-native infrastructure. I work across the full stack, from designing FastAPI microservices and RAG pipelines to deploying containerized workloads on AWS and Kubernetes. Whether it's reducing hallucinations in an AI assistant or automating CI/CD workflows, I focus on shipping software that's scalable, reliable, and solves real problems.",
+    "I'm driven by the intersection of AI and software engineering — building tools like ReachCraft (a free AI-powered cold email platform) and real-time transcription systems that go from idea to deployed product. I care about clean architecture, measurable impact, and making complex systems simple. When I'm not coding, you'll find me at table tennis clubs, unwinding at cafés, or gaming my way through the evenings.",
   ],
 };
 
@@ -244,10 +241,10 @@ export const experiences = [
     duration: "Jul 2020 – Dec 2022",
     location: "Remote",
     bullets: [
-      "Delivered 10+ full-stack web applications using Django REST, Spring Boot, React, Angular, and PostgreSQL, improving client operational efficiency by 40–60%",
-      "Built data-driven dashboards and analytics tools with Python, Pandas, Flask/Django, providing actionable insights to 200+ end-users",
-      "Deployed applications to AWS cloud using Docker and CI/CD pipelines, reducing deployment time by 50% and server downtime by 30%",
-      "Delivered 15+ secure REST APIs with authentication and access control, preventing potential data breaches and enhancing system reliability",
+      "Delivered 10+ full-stack web applications for clients in healthcare, real estate, and education sectors using Django REST, Spring Boot, React, Angular, and PostgreSQL, improving operational efficiency by 40–60%",
+      "Built interactive dashboards and analytics tools for healthcare and real estate clients using Python, Pandas, and Flask/Django, providing actionable insights to 200+ end-users",
+      "Deployed client applications to AWS using Docker and CI/CD pipelines, reducing deployment time by 50% and server downtime by 30%",
+      "Designed and delivered 15+ secure REST APIs with role-based authentication and access control, ensuring data compliance and system reliability",
     ],
     tech: [
       "Django REST",
@@ -390,12 +387,12 @@ export const certifications = [
 
 export const testimonials = [
   {
-    name: "Amit Kumar Singhai",
-    title: "Senior Associate Consultant",
-    linkedIn: "https://www.linkedin.com/in/amit-kumar-singhai/",
-    image: (process.env.PUBLIC_URL || "") + "/testimonials/amit-singhai.jpeg",
-    text: "I had the pleasure of working with Varad at Tata Consultancy Services, where he consistently demonstrated strong problem-solving abilities and a collaborative spirit. In his role, Varad handled complex data-driven deliverables with precision, using his analytical thinking to identify and address inefficiencies, which led to measurable operational improvements. His critical thinking was especially evident when resolving high-priority production issues, where he worked seamlessly with cross-functional teams to ensure optimal system performance. Varad's commitment to delivering quality solutions and his proactive approach made him a reliable and highly valued team player. I'm confident he'll continue to excel in any future endeavor",
-    color: "hsl(124, 70%, 85%)",
+    name: "Owen Turnbull",
+    title: "Technical Project/Program Manager",
+    linkedIn: "https://www.linkedin.com/in/owen-turnbull/",
+    image: (process.env.PUBLIC_URL || "") + "/testimonials/owen.jpeg",
+    text: "For anyone seeking a dedicated and highly capable Engineer, Varad is the person you need. During our time working together at Mavenir, I was consistently impressed by his professionalism, clarity of thought, and methodical problem-solving abilities. One particular instance that stands out was when Varad assisted me in troubleshooting a complex Python-based automation script. His structured approach to debugging, combined with his ability to break down the problem and communicate solutions clearly, showcased his strong technical foundation and maturity beyond his experience level.\n\nVarad's passion for engineering and his proactive attitude make him a standout team player. He doesn't just solve problems — he ensures long-term solutions by understanding the root cause and improving processes wherever possible. I have no doubt that Varad will excel in his future endeavors and grow into a top-tier engineer in any organization he joins",
+    color: "hsla(67, 71%, 85%, 1.00)",
   },
   {
     name: "Ashwinkumar S Padale",
@@ -406,12 +403,12 @@ export const testimonials = [
     color: "hsla(184, 71%, 85%, 1.00)",
   },
   {
-    name: "Owen Turnbull",
-    title: "Technical Project/Program Manager",
-    linkedIn: "https://www.linkedin.com/in/owen-turnbull/",
-    image: (process.env.PUBLIC_URL || "") + "/testimonials/owen.jpeg",
-    text: "For anyone seeking a dedicated and highly capable Engineer, Varad is the person you need. During our time working together at Mavenir, I was consistently impressed by his professionalism, clarity of thought, and methodical problem-solving abilities. One particular instance that stands out was when Varad assisted me in troubleshooting a complex Python-based automation script. His structured approach to debugging, combined with his ability to break down the problem and communicate solutions clearly, showcased his strong technical foundation and maturity beyond his experience level.\n\nVarad's passion for engineering and his proactive attitude make him a standout team player. He doesn't just solve problems — he ensures long-term solutions by understanding the root cause and improving processes wherever possible. I have no doubt that Varad will excel in his future endeavors and grow into a top-tier engineer in any organization he joins",
-    color: "hsla(67, 71%, 85%, 1.00)",
+    name: "Amit Kumar Singhai",
+    title: "Senior Associate Consultant",
+    linkedIn: "https://www.linkedin.com/in/amit-kumar-singhai/",
+    image: (process.env.PUBLIC_URL || "") + "/testimonials/amit-singhai.jpeg",
+    text: "I had the pleasure of working with Varad at Tata Consultancy Services, where he consistently demonstrated strong problem-solving abilities and a collaborative spirit. In his role, Varad handled complex data-driven deliverables with precision, using his analytical thinking to identify and address inefficiencies, which led to measurable operational improvements. His critical thinking was especially evident when resolving high-priority production issues, where he worked seamlessly with cross-functional teams to ensure optimal system performance. Varad's commitment to delivering quality solutions and his proactive approach made him a reliable and highly valued team player. I'm confident he'll continue to excel in any future endeavor",
+    color: "hsl(124, 70%, 85%)",
   },
 ];
 
