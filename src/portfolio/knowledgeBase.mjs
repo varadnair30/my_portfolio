@@ -23,6 +23,15 @@ export const about = {
 
 export const projects = [
   {
+    title: "InsureCo Claims Voice Agent",
+    description:
+      "Production-ready voice AI system handling inbound insurance claim support calls. Manages caller authentication, claim status retrieval, FAQ responses, escalation workflows, and async post-call logging. Uses a multi-LLM pattern — GPT-4o for live interactions and GPT-4o-mini for summarization (~30x cost savings) — with a swappable CRM adapter pattern for Google Sheets, Salesforce, or Zendesk.",
+    tech: ["Python", "FastAPI", "VAPI", "GPT-4o", "Deepgram", "ElevenLabs", "Google Sheets API", "Docker", "pytest"],
+    image: (process.env.PUBLIC_URL || "") + "/projects/insureco.png",
+    github: "https://github.com/varadnair30/insureco-claims-voice-agent",
+    demo: "https://share.vidyard.com/watch/NAVCQ5iQ6pvK1EohXBXtCa",
+  },
+  {
     title: "ReachCraft: AI-powered job application automation",
     description:
       "Free tool to generate cover emails and FREE alternative for (Hunter.io, Apollo.io,etc.) to get unlimited emails for cold emailing. Job seekers send 200+ applications before landing an offer, with cold applications having only a 0.1-2% success rate. The challenge? Personalizing hundreds of cold emails is impossible while job search stress.",
@@ -30,15 +39,6 @@ export const projects = [
     image: (process.env.PUBLIC_URL || "") + "/projects/ReachCraft.png",
     github: "https://github.com/varadnair30/ReachCraft",
     demo: "https://reachcraft-frontend.onrender.com/",
-  },
-  {
-    title: "InsureCo Claims Voice Agent",
-    description:
-      "Production-ready voice AI system handling inbound insurance claim support calls. Manages caller authentication, claim status retrieval, FAQ responses, escalation workflows, and async post-call logging. Uses a multi-LLM pattern — GPT-4o for live interactions and GPT-4o-mini for summarization (~30x cost savings) — with a swappable CRM adapter pattern for Google Sheets, Salesforce, or Zendesk.",
-    tech: ["Python", "FastAPI", "VAPI", "GPT-4o", "Deepgram", "ElevenLabs", "Google Sheets API", "Docker", "pytest"],
-    image: (process.env.PUBLIC_URL || "") + "/projects/insureco.png",
-    github: "https://github.com/varadnair30/insureco-claims-voice-agent",
-    demo: "",
   },
   {
     title: "Sandboxing: API Executor with NsJail",
