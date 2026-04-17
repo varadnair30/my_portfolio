@@ -32,6 +32,15 @@ export const projects = [
     demo: "https://reachcraft-frontend.onrender.com/",
   },
   {
+    title: "InsureCo Claims Voice Agent",
+    description:
+      "Production-ready voice AI system handling inbound insurance claim support calls. Manages caller authentication, claim status retrieval, FAQ responses, escalation workflows, and async post-call logging. Uses a multi-LLM pattern — GPT-4o for live interactions and GPT-4o-mini for summarization (~30x cost savings) — with a swappable CRM adapter pattern for Google Sheets, Salesforce, or Zendesk.",
+    tech: ["Python", "FastAPI", "VAPI", "GPT-4o", "Deepgram", "ElevenLabs", "Google Sheets API", "Docker", "pytest"],
+    image: (process.env.PUBLIC_URL || "") + "/projects/insureco.png",
+    github: "https://github.com/varadnair30/insureco-claims-voice-agent",
+    demo: "",
+  },
+  {
     title: "Sandboxing: API Executor with NsJail",
     description:
       "Built a secure Python code execution API with NsJail isolation on Google Cloud Run. Solved Cloud Run compatibility challenges by implementing read-only bind mounts for filesystem isolation, achieving production-ready sandboxing without elevated privileges.",
