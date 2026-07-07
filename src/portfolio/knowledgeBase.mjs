@@ -213,8 +213,8 @@ export const experiences = [
       "Docker",
       "AssemblyAI",
       "WebSocket",
-      "Streamlit",
-      "Pandas",
+      "QLoRA",
+      "Phi",
     ],
   },
   {

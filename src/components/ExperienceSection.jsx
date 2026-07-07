@@ -6,10 +6,10 @@ export default function ExperienceSection() {
     <section className="py-5 bg-white" id="experience">
       <div className="container">
         <h2 className="text-center fw-bold mb-4">Experience</h2>
-        <div className="row g-4">
+        <div className="experience-grid">
           {experiences.map((exp, i) => (
-            <div key={i} className="col-md-6">
-              <div className="border rounded p-3 h-100 shadow-sm experience-card">
+            <div key={i} className="experience-card-wrap">
+              <div className="border rounded p-3 shadow-sm experience-card">
                 <div className="d-flex align-items-center mb-2">
                   <img
                     src={process.env.PUBLIC_URL + exp.logo}
@@ -42,6 +42,19 @@ export default function ExperienceSection() {
         </div>
 
         <style>{`
+          .experience-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+          }
+          @media (min-width: 768px) {
+            .experience-grid {
+              column-count: 2;
+            }
+          }
+          .experience-card-wrap {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+          }
           .experience-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
           }
