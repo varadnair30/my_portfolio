@@ -22,6 +22,7 @@ export const about = {
 };
 
 export const projects = [
+  
   {
     title: "InsureCo Claims Voice Agent",
     description:
@@ -30,6 +31,14 @@ export const projects = [
     image: (process.env.PUBLIC_URL || "") + "/projects/insureco.png",
     github: "https://github.com/varadnair30/insureco-claims-voice-agent",
     demo: "https://share.vidyard.com/watch/NAVCQ5iQ6pvK1EohXBXtCa",
+  },
+  {
+    title: "Sentinel: Agentic AI for Kubernetes Incident Investigation",
+    description:
+      "Production-grade agentic AI system that investigates Kubernetes incidents end-to-end. Built around a custom ~150-line ReAct loop (no agent framework) with typed tool interfaces, audit-traceable reasoning, and retry semantics for real LLM failure modes. Pulls evidence from Loki logs and live pod state, reasons over the signals, and produces structured hypotheses with full per-step audit trails. Validated against a chaos-engineered test bed running the Online Boutique microservices demo under Chaos Mesh container-kill schedules.",
+    tech: ["Go", "Groq (Llama 3.3 70B)", "Kubernetes", "Loki", "Promtail", "Grafana", "Chaos Mesh", "Docker"],
+    image: (process.env.PUBLIC_URL || "") + "/projects/sentinel.PNG",
+    github: "https://github.com/varadnair30/sentinel",
   },
   {
     title: "ReachCraft: AI-powered job application automation",
