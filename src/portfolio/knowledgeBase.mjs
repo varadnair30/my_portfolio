@@ -22,7 +22,19 @@ export const about = {
 };
 
 export const projects = [
-  
+  {
+    title: "PatchPilot",
+    description:
+      "Human-gated dependency-vulnerability triage. A LangGraph state machine finds which " +
+      "advisories are actually reachable in the code, scores them with a deterministic policy, " +
+      "tests the fix in Docker, and pauses at a durable interrupt for a human when the policy " +
+      "won't decide alone. The model never decides — it only writes justifications, checked " +
+      "against cited evidence. 38 golden cases block any change that flips a ratified decision.",
+    tech: ["Python", "LangGraph", "LangSmith", "FastAPI", "Postgres", "Docker", "GitHub Actions"],
+    image: (process.env.PUBLIC_URL || "") + "/projects/patchpilot.png",
+    github: "https://github.com/varadnair30/patchpilot",
+    demo: "https://github.com/varadnair30/patchpilot",
+  },
   {
     title: "InsureCo Claims Voice Agent",
     description:
@@ -193,10 +205,23 @@ export const projects = [
 export const experiences = [
   {
     title: "AI Engineer",
+    company: "Zenith Technology",
+    logo: "/companies/zenith.jpeg",
+    duration: "Jun 2026 – Present",
+    location: "Dallas, TX",
+    bullets: [
+      "Owned end-to-end design of 2 production backend pipelines, FastAPI services on AWS handling document ingestion, chunking, embedding, and retrieval for a 5,000+ document corpus, applying LLM-based processing to the retrieval layer",
+      "Designed an evaluation and quality-gating workflow (40+ test cases) validating model output before release, integrated into the deployment pipeline",
+      "Fine-tuned and integrated an open-source LLM (QLoRA, 4-bit quantization) into the production system for domain-specific tasks, iterating through code reviews and technical design discussions",
+    ],
+    tech: ["Python", "FastAPI", "AWS", "RAG", "LLM Fine-Tuning", "QLoRA", "Evaluation Pipelines", "CI/CD"],
+  },
+  {
+    title: "AI Engineer",
     company:
       "Sustainable and Efficient Allocation of Resources Lab (SEAR), University of Texas at Arlington",
     logo: "/companies/uta.png",
-    duration: "Jan 2025 – Present",
+    duration: "Jan 2025 – Jun 2026",
     location: "Arlington, TX",
     bullets: [
       "Architected production-ready RAG AI assistant achieving 92% retrieval accuracy and reducing hallucinations by 40% using LangChain, BM25 + FAISS hybrid retrieval with Chroma vector store; transitioned from cloud APIs to offline Gemma 2B for sub-200ms latency and privacy",
