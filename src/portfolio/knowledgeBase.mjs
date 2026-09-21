@@ -33,7 +33,7 @@ export const projects = [
     tech: ["Python", "LangGraph", "LangSmith", "FastAPI", "Postgres", "Docker", "GitHub Actions"],
     image: (process.env.PUBLIC_URL || "") + "/projects/patchpilot.png",
     github: "https://github.com/varadnair30/patchpilot",
-    demo: "https://github.com/varadnair30/patchpilot",
+    demo: "https://varadnair30.github.io/patchpilot/queue/",
   },
   {
     title: "InsureCo Claims Voice Agent",
