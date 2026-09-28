@@ -458,6 +458,15 @@ export const testimonials = [
 ];
 
 export const highlights = {
+  lifeOutsideCode: {
+    title: "Life Outside Code (a few snapshots)",
+    images: [
+      { src: "/life/vessel-nyc.jpg", caption: "Exploring The Vessel, NYC" },
+      { src: "/life/ramen-time.jpg", caption: "Ramen night in New York" },
+      { src: "/life/yosemite-hike.jpg", caption: "Hiking in Yosemite" },
+      { src: "/life/yosemite-splash.jpg", caption: "Lake break in Yosemite" },
+    ],
+  },
   aitInternship: {
     title: "🌏 AIT Summer Research Internship, Thailand (2019)",
     subtitle:

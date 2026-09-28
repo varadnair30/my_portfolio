@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import HighlightSection from "./components/HighlightSection";
+import LifeOutsideCodeSection from "./components/LifeOutsideCodeSection";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <LifeOutsideCodeSection />
         <HighlightSection />
         <LeadershipSection />
         <SkillsSection />
