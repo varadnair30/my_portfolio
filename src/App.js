@@ -7,7 +7,6 @@ import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import CertificationsSection from "./components/CertificationsSection";
 import ContactSection from "./components/ContactSection";
 import SideNav from "./components/SideNav";
 import LeadershipSection from "./components/LeadershipSection";
@@ -28,7 +27,6 @@ export default function App() {
         <ExperienceSection />
         <ProjectsSection />
         <TestimonialsSection />
-        <CertificationsSection />
         <ContactSection />
         
       </main>

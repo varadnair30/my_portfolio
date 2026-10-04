@@ -55,7 +55,7 @@ export const projects = [
   {
     title: "ReachCraft: AI-powered job application automation",
     description:
-      "Free tool to generate cover emails and FREE alternative for (Hunter.io, Apollo.io,etc.) to get unlimited emails for cold emailing. Job seekers send 200+ applications before landing an offer, with cold applications having only a 0.1-2% success rate. The challenge? Personalizing hundreds of cold emails is impossible while job search stress.",
+      "AI-powered tool that personalizes and automates cold outreach emails for job applicants. Job seekers typically send 200+ applications before landing an offer, and generic, un-personalized outreach converts at only 0.1-2%. ReachCraft tackles the bottleneck — manually tailoring hundreds of emails is unsustainable under job search stress — by generating personalized cover emails at scale, so applicants can send quality outreach without the manual grind.",
     tech: ["Python", "FastAPI", "Supabase", "GitHub", "Render", "REST API"],
     image: (process.env.PUBLIC_URL || "") + "/projects/ReachCraft.png",
     github: "https://github.com/varadnair30/ReachCraft",
@@ -408,27 +408,6 @@ export const leadership = {
     { icon: "🎯", name: "Student Advocacy" },
   ],
 };
-
-export const certifications = [
-  {
-    name: "Microsoft Certified: Bing Ads Fundamentals",
-    issuer: "Microsoft",
-    badge: (process.env.PUBLIC_URL || "") + "/certs/microsoft.png",
-    link: "https://drive.google.com/file/d/1LikUf4tcicgIpy86kEd2bI1x8gXp-WAP/view?usp=sharing",
-  },
-  {
-    name: "Kubernetes for Developers: Core Concepts",
-    issuer: "Linkedin Learning",
-    badge: (process.env.PUBLIC_URL || "") + "/certs/kubernetes.png",
-    link: "https://www.linkedin.com/learning/certificates/85bd9fed3f3f77e21cd57b8c61b68c78c8c6388c36eee0eb23170110c5bb2e24",
-  },
-  {
-    name: "Software Engineer Certification",
-    issuer: "HackerRank",
-    badge: (process.env.PUBLIC_URL || "") + "/certs/hackerrank.jpg",
-    link: "https://www.hackerrank.com/certificates/386367939bae",
-  },
-];
 
 export const testimonials = [
   {

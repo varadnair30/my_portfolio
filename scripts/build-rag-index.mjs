@@ -198,16 +198,6 @@ async function main() {
     });
   }
 
-  for (const c of kb.certifications) {
-    rawDocs.push({
-      section: "certifications",
-      href: "#certifications",
-      title: `${c.name} — ${c.issuer}`,
-      links: [c.link].filter(Boolean),
-      body: `${c.name} (${c.issuer})`,
-    });
-  }
-
   for (const t of kb.testimonials) {
     rawDocs.push({
       section: "testimonials",
