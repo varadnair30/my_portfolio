@@ -217,7 +217,7 @@ export const experiences = [
     tech: ["Python", "FastAPI", "AWS", "RAG", "LLM Fine-Tuning", "QLoRA", "Evaluation Pipelines", "CI/CD"],
   },
   {
-    title: "AI Engineer",
+    title: "Research Assistant",
     company:
       "Sustainable and Efficient Allocation of Resources Lab (SEAR), University of Texas at Arlington",
     logo: "/companies/uta.png",
@@ -228,7 +228,7 @@ export const experiences = [
       "Fine-tuned LLaMA 3 and Phi-2 using QLoRA (4-bit quantization via bitsandbytes) on domain-specific datasets, reducing inference memory footprint by 45% while retaining 93%+ task accuracy compared to the full-precision baseline",
       "Implemented RAG evaluation pipeline using RAGAS framework — tracking faithfulness, answer relevancy, and context recall across 1,000+ query samples — iterating retrieval strategies to improve end-to-end pipeline score from 0.71 to 0.89",
       "Engineered real-time AI panel transcription system with multi-speaker diarization processing live audio via WebSocket → Whisper STT → Phi → Stable Diffusion for automated visual generation within 1-2 seconds, serving 500+ daily queries",
-      "Designed FastAPI microservices coordinating speech-to-text STT (AssemblyAI), LLM summarization (Ollama), and text-to-image pipelines (SD, Pollinations.ai), achieving 95% uptime across multi-modal AI workflows",
+      "Designed FastAPI microservices coordinating speech-to-text STT (Deepgram, with Whisper fallback), LLM summarization (Ollama), and text-to-image pipelines (SD, Pollinations.ai), achieving 95% uptime across multi-modal AI workflows",
       "Built adaptive LLaMA 3 → Phi model fallback for low-RAM environments, optimizing CLIP tokenization and GPU utilization while maintaining 95%+ visual accuracy and 3x throughput improvement",
       "Automated CI/CD with GitHub Actions for AI deployments on AWS, implementing Docker containerization for infrastructure",
     ],
@@ -245,7 +245,7 @@ export const experiences = [
       "AWS",
       "FastAPI",
       "Docker",
-      "AssemblyAI",
+      "Deepgram",
       "WebSocket",
       "QLoRA",
       "Phi",
@@ -272,12 +272,17 @@ export const experiences = [
     duration: "Aug 2021 – Jun 2023",
     location: "Pune, India",
     bullets: [
-      "Spearheaded data-driven projects using Azure DevOps, Python, and SQL, executing large-scale analysis on 2-3 TB datasets in COSMOS to identify process inefficiencies.",
-      "Developed backend services for customer-facing applications ensuring seamless integration with frontend systems.",
-      "Optimized data warehousing processes by 50% through campaign analysis using Adobe Analytics, Python, SQL, and Power BI.",
-      "Diagnosed and resolved over 30 production issues within tight deadlines, collaborating closely with QA, IT, and Operations teams to enhance system performance.",
+      "Led two enterprise projects in parallel on Azure + AWS cloud platforms, building distributed microservices with Spring Boot & Python for large-scale data analytics",
+      "Designed and deployed REST APIs and microservices on Azure Kubernetes Service (AKS), improving campaign analysis performance by 50% and ensuring horizontal scalability",
+      "Built AWS Lambda + S3 data pipelines for real-time ingestion and storage of 2–3 TB datasets, reducing manual ETL overhead by 40%",
+      "Automated ETL workflows using Python, SQL, and Azure Data Factory to streamline reporting across multiple business units",
+      "Optimized queries with partitioning, indexing, & caching strategies, cutting query latency in high-volume data pipelines by up to 60%",
+      "Secured services with OAuth2/JWT authentication and implemented role-based access control across APIs to strengthen enterprise security",
+      "Delivered CI/CD pipelines using Azure DevOps and Jenkins, enabling automated build/test/deployment with 99% release success rate",
+      "Built Power BI dashboards connected to data warehouses, providing executives with near real-time KPI tracking and campaign insights",
+      "Collaborated cross-functionally with data engineering, DevOps, & analysts to integrate cloud solutions, reducing release cycles by 30%",
     ],
-    tech: ["Python", "NoSQL", "Azure DevOps", "Adobe Analytics", "Power BI", "COSMOS DB"],
+    tech: ["Java", "Spring Boot", "Python", "Azure", "AWS", "AKS", "Lambda", "S3", "Azure Data Factory", "SQL", "OAuth2/JWT", "Azure DevOps", "Jenkins", "Power BI"],
   },
   {
     title: "Freelance Full-Stack Developer",
@@ -437,15 +442,6 @@ export const testimonials = [
 ];
 
 export const highlights = {
-  lifeOutsideCode: {
-    title: "Life Outside Code (a few snapshots)",
-    images: [
-      { src: "/life/vessel-nyc.jpg", caption: "Exploring The Vessel, NYC" },
-      { src: "/life/ramen-time.jpg", caption: "Ramen night in New York" },
-      { src: "/life/yosemite-hike.jpg", caption: "Hiking in Yosemite" },
-      { src: "/life/yosemite-splash.jpg", caption: "Lake break in Yosemite" },
-    ],
-  },
   aitInternship: {
     title: "🌏 AIT Summer Research Internship, Thailand (2019)",
     subtitle:
