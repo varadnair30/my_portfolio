@@ -210,11 +210,11 @@ export const experiences = [
     duration: "Jun 2026 – Present",
     location: "Dallas, TX",
     bullets: [
-      "Owned end-to-end design of 2 production backend pipelines, FastAPI services on AWS handling document ingestion, chunking, embedding, and retrieval for a 5,000+ document corpus, applying LLM-based processing to the retrieval layer",
+      "Owned end-to-end design of 2 production backend pipelines, FastAPI services on AWS handling document ingestion, chunking, embedding, and retrieval for a 5,000+ document corpus, integrating an MCP (Model Context Protocol) server to expose the retrieval layer to the LLM",
       "Designed an evaluation and quality-gating workflow (40+ test cases) validating model output before release, integrated into the deployment pipeline",
       "Fine-tuned and integrated an open-source LLM (QLoRA, 4-bit quantization) into the production system for domain-specific tasks, iterating through code reviews and technical design discussions",
     ],
-    tech: ["Python", "FastAPI", "AWS", "RAG", "LLM Fine-Tuning", "QLoRA", "Evaluation Pipelines", "CI/CD"],
+    tech: ["Python", "FastAPI", "AWS", "RAG", "MCP", "LLM Fine-Tuning", "QLoRA", "Evaluation Pipelines", "CI/CD"],
   },
   {
     title: "Research Assistant",
@@ -379,6 +379,7 @@ export const skillCategories = [
       { name: "NLP", level: 80 },
       { name: "Data Analysis", level: 87 },
       { name: "Pandas", level: 90 },
+      { name: "MCP (Model Context Protocol)", level: 80 },
     ],
   },
 ];
