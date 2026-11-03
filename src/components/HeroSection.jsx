@@ -46,7 +46,7 @@ export default function HeroSection() {
                 sequence={[
                   'AI, Cloud & Full Stack Systems Specialist',
                   2000,
-                  'Full-Stack Engineer | 4+ YOE',
+                  'Full-Stack Engineer | 5+ YOE',
                   2000,
                   'A passionate Musician ;)',
                   2000,

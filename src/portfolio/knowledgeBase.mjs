@@ -14,9 +14,9 @@ export const portfolioOwner = {
 
 export const about = {
   lead:
-    "Software Engineer with 4+ years of experience building scalable backend systems and full-stack applications, specializing in AI integrations, cloud-native infrastructure, and DevOps automation. Proven collaborator known for delivering high-impact, user-centric software products with strong technical depth and a passion for optimization.",
+    "Software Engineer with 5+ years of experience building scalable backend systems and full-stack applications, specializing in AI integrations, cloud-native infrastructure, and DevOps automation. Proven collaborator known for delivering high-impact, user-centric software products with strong technical depth and a passion for optimization.",
   paragraphs: [
-    "I'm Varad Nair — a Software Engineer with a Master's in Computer Science from the University of Texas at Arlington and 4+ years of experience building production-ready backend systems, AI-powered applications, and cloud-native infrastructure. I work across the full stack, from designing FastAPI microservices and RAG pipelines to deploying containerized workloads on AWS and Kubernetes. Whether it's reducing hallucinations in an AI assistant or automating CI/CD workflows, I focus on shipping software that's scalable, reliable, and solves real problems.",
+    "I'm Varad Nair — a Software Engineer with a Master's in Computer Science from the University of Texas at Arlington and 5+ years of experience building production-ready backend systems, AI-powered applications, and cloud-native infrastructure. I work across the full stack, from designing FastAPI microservices and RAG pipelines to deploying containerized workloads on AWS and Kubernetes. Whether it's reducing hallucinations in an AI assistant or automating CI/CD workflows, I focus on shipping software that's scalable, reliable, and solves real problems.",
     "I'm driven by the intersection of AI and software engineering — building tools like ReachCraft (a free AI-powered cold email platform) and real-time transcription systems that go from idea to deployed product. I care about clean architecture, measurable impact, and making complex systems simple. When I'm not coding, you'll find me at table tennis clubs, unwinding at cafés, or gaming my way through the evenings.",
   ],
 };
