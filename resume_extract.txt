@@ -1,0 +1,58 @@
+Varad Nair 
+vnairusa30@gmail.com | (657)-767-9035 | Dallas, TX (open to relocation – India) | linkedin.com/in/nvarad | varadnair30.github.io/my_portfolio/ 
+SUMMARY 
+Software Engineer with 4+ years of experience in full-stack development, cloud-native architectures, and scalable distributed systems, including 
+2 years applying AI/ML in production — RAG pipelines and LLM-serving microservices. Skilled in Java, Python, Spring Boot, Django, React, AWS, 
+Kubernetes, and modern web technologies. Proven track record of delivering production -ready, secure, high-performance applications across 
+enterprise and research environments. Experienced in DevOps, CI/CD, microservices, data -driven analytics, and cloud deployments. 
+TECHNICAL SKILLS 
+• Languages & Frameworks: Python, Java, C++, Spring Boot, Django, FastAPI, Flask, React, Angular, TypeScript, Tailwind 
+• AI/ML & Data: TensorFlow, PyTorch, LangChain, FAISS, NLP, LLMs, RAG Pipelines, Whisper, Stable Diffusion 
+• Cloud & DevOps:  AWS (EC2, S3, RDS, Lambda, CloudWatch), Azure, GCP, Docker, Kubernetes, Terraform, OpenShift, 
+GitHub Actions, Jenkins, GitLab CI 
+• Databases: PostgreSQL, MySQL, MongoDB, Oracle, Redis, Snowflake 
+• Other Tools: Bash, PowerShell, JIRA, Confluence, Swagger, Postman 
+ 
+EXPERIENCE 
+Zenith Technology       Dallas, Texas, USA 
+AI Engineer    Jun 2026 – Present 
+• Built and deployed 2 production LLM-powered pipelines end-to-end,  FastAPI services handling document ingestion, chunking, 
+embedding, and retrieval on AWS, serving a 5,000+ document corpus 
+• Designed an evaluation and quality-gating workflow (40+ test cases) validating model output before release, integrated into 
+the deployment pipeline 
+• Fine-tuned and integrated an open-source LLM (QLoRA, 4-bit quantization) into the production system for domain-specific 
+tasks, iterating through code reviews and technical design discussions  
+SEAR Labs (University of Texas, Arlington)   Arlington, Texas, USA 
+Research Assistant    Jan 2025 – Jun 2026 
+• Engineered a hybrid retrieval backend (BM25 + FAISS + Chroma vector store) achieving 92% retrieval accuracy at sub-200ms 
+latency, migrating from cloud APIs to an offline Gemma 2B deployment for privacy and performance 
+• Designed a real-time distributed audio-processing system (WebSocket streaming, multi-speaker diarization, chained inference 
+services: Whisper STT → Phi → Stable Diffusion) serving 500+ daily queries within 2–3 second end-to-end latency 
+• Built FastAPI microservices orchestrating speech-to-text, LLM summarization, and text-to-image inference pipelines, achieving 
+95% uptime across multi-modal workflows 
+• Fine-tuned LLaMA 3 and Phi-2 using QLoRA (4-bit quantization), reducing inference memory footprint by 45% while retaining 
+93%+ task accuracy versus the full-precision baseline 
+• Automated CI/CD with GitHub Actions for AI deployments on AWS, implementing Docker containerization for infrastructure  
+Mavenir Systems   Richardson, USA 
+Software Engineer Intern    May 2024 – Aug 2024 
+• Developed backend network automation with Python and Kubernetes, improving scalability and reliability by 40% 
+• Implemented CI/CD pipelines with Jenkins + GitHub Actions, cutting downtime by 20% 
+• Deployed monitoring and alerting tools across 700 MHz and CBRS networks, improving real-time observability and fault detection 
+Tata Consultancy Services    Pune, India 
+Software Engineer   Aug 2021 – Jun 2023 
+• Led two enterprise projects on Azure + AWS cloud platforms, building distributed microservices with Spring Boot & Python 
+for large-scale data analytics 
+• Designed and deployed REST APIs and microservices on Azure Kubernetes Service (AKS), improving campaign analysis performance 
+by 50% and ensuring horizontal scalability 
+• Built AWS Lambda + S3 data pipelines for real-time ingestion and storage of 2–3 TB datasets, reducing manual ETL overhead by 40% 
+• Optimized queries with partitioning, indexing, & caching strategies, cutting query latency in high-volume data pipelines by up to 60% 
+• Secured services with OAuth2/JWT authentication & implemented role-based access control across APIs to strengthen enterprise security 
+• Built Power BI dashboards connected to data warehouses, providing executives with near real-time KPI tracking and campaign insights 
+Freelancer                                                                                                                                                                                                                   Remote, India 
+Software Engineer / Full-Stack Developer   July 2020 – Dec 2022 
+• Designed and developed 10+ production-ready web applications and interactive analytics dashboards (Django REST, Spring Boot, 
+React, Angular, PostgreSQL, Plotly), boosting client operational efficiency by 40–60% and serving 200+ active end-users 
+ 
+EDUCATION 
+The University of Texas at Arlington | Master of Science, Computer Science | Aug 2023 – May 2025 | GPA: 3.75 
+Relevant Subjects: Machine Learning, Distributed Systems, Software Engineering, Project Management, Data Structure and Algorithms 
