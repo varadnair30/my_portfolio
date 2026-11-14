@@ -425,6 +425,12 @@ export const testimonials = [
     color: "hsla(67, 71%, 85%, 1.00)",
   },
   {
+    name: "Erick Jones, Jr., PhD",
+    title: "Assistant Professor & SEAR Lab Director, University of Texas at Arlington",
+    text: "I am an Assistant Professor in the Department of Industrial, Manufacturing, and Systems Engineering (IMSE) at the University of Texas at Arlington and director of the Sustainable and Equitable Allocation of Resources (SEAR) Laboratory. I supervised Varad Nair in my group for approximately a year and a half, and over that time he made substantial contributions to our AI work. I am happy to support his application.\n\nReal-time speech system. Varad designed and built a real-time AI system that converts live audio into structured results within a second or two. He maintained it reliably enough for daily use, which is a much higher bar than a working prototype.\n\nSource-grounded AI assistant. Varad also built an AI assistant that answers questions from the lab’s own documents and shows the source behind each answer, so a user can verify what it says rather than take it on trust.\n\nEvaluation and reliability. What stood out to me was his attention to accuracy. He built his own tests, measured where the system failed, and kept refining it until it was markedly more accurate and produced far fewer fabricated answers. Many students can get an AI demonstration working. Varad treated reliability as part of the job.\n\nVarad is thoughtful, candid about what is and is not working, and a pleasure to have on a team. I recommend him for roles building AI products.",
+    color: "hsla(210, 71%, 85%, 1.00)",
+  },
+  {
     name: "Ashwinkumar S Padale",
     title: "Senior Systems Integration Engineer",
     linkedIn: "https://www.linkedin.com/in/ashwwin24/",
